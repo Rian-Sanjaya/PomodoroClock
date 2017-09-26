@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #2E2E2E;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+	width: 320px;
+	margin: 0 auto;
+	/*min-width: 320px;*/
+}
+
+h2 {
+	font-family: 'Lato', sans-serif;;
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: .15em;
+}
+
+.break, .session {
+	display: inline-block;
+}
+.session { float: right; }
+.break .description { color: #ff0000; }
+.session .description { color: #52CC29; }
+.break-min, .session-min { float: left; }
+.value { text-align: center; font-size: 1.5em; font-weight: 700;}
+.break-plus, .session-plus { float: right; }
+.control { font-size: 1.2em; font-weight: 700; border: none; background: #2E2E2E; color: #fff; cursor: pointer; outline: none; }
+.control:hover { color: #95a5a6; }
+
+.clock {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin: 20px auto;
+	border: 2px solid #52CC29;
+	font-size: 4em;
+	font-weight: 500;
+	letter-spacing: .1em;
+	cursor: pointer;
+	overflow: hidden; 		/*does not make the pointer cursor outside the circle border*/
+	position: relative;
+}
+.clock:hover { box-shadow: 0 0 100px #334d00; }
+/*.fill {
+	width: 100%;
+	height: 0%;
+	position: absolute;
+	left: 0;
+}
+.fill.session {
+	bottom: 0;
+	background: green;
+	z-index: 1;
+}
+.fill.break {
+	top: 0;
+	background: red;
+	z-index: 2;
+}*/
+.fill {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	/*right: 0;*/
+	width: 100%;
+	/*height: 100%;*/
+	/*border-radius: 50%;*/
+}
+.fill.session { background: #52CC29; }
+.fill.break { background: #ff0000; }
+.time {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+}
+
+.nextSet { margin-top: 20px; }
+.next { display: inline-block; cursor: pointer; }
+.reset { display: inline-block; float: right; cursor: pointer; }
